@@ -36,7 +36,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/CalNumber.o \
-	${OBJECTDIR}/DigitalRoot.o
+	${OBJECTDIR}/DigitalRoot.o \
+	${OBJECTDIR}/FoldArray.o
 
 
 # C Compiler Flags
@@ -72,6 +73,11 @@ ${OBJECTDIR}/DigitalRoot.o: DigitalRoot.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DigitalRoot.o DigitalRoot.cpp
+
+${OBJECTDIR}/FoldArray.o: FoldArray.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FoldArray.o FoldArray.cpp
 
 # Subprojects
 .build-subprojects:
